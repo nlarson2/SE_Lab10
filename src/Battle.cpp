@@ -14,14 +14,15 @@ Notes:
 #ifndef BATTLE_CPP
 #define BATTLE_CPP
 
-#include "Battle.h"
+#include <stdio.h>
 
-#include "Image.h"
+#include <stdlib.h>
 #include <GL/gl.h>
 #include <GL/glu.h>
 #include "fonts.h"
+#include "Image.h"
+#include "Battle.h"
 
-#include <stdio.h>
 
 Battle::Battle(int _xres, int _yres, Enemy * _enemy, Player * _player)
 {

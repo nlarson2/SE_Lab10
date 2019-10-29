@@ -14,9 +14,11 @@ Modified Date:
 
 
 #include <stdio.h>
-#include "Image.h"
+#include <stdlib.h>
 #include <GL/gl.h>
 #include <GL/glu.h>
+#include <cmath>
+#include "Image.h"
 #include "Enemy.h"
 
 static const int 
@@ -65,7 +67,7 @@ Enemy::Enemy(int x, int y, int _dir, int _health) {
 void Enemy::DrawEnemy(int xres, int yres, int x, int y) {
     int xdist = x - xpos;
     int ydist = y - ypos;
-    if (abs(xdist) < 6 && abs(ydist) < 6) {
+    if (std::abs(xdist) < 6 && std::abs(ydist) < 6) {
         int w = xres/11.0f + xres/50.0f;
         int h = yres/11.0f + yres/30.0f;
         glBindTexture(GL_TEXTURE_2D, texture);
